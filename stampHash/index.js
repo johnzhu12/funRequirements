@@ -14,20 +14,30 @@ window.onload = function () {
         drawText()
 
     }
+
     function drawText() {
         //96位的hash
-        var myhash = 'jkadjkdawdwahdawhawhdwdrrjkadjkdawdwahdawhdwdrrjkadjkdawdwahdawhdwdrrjkadjkdawdwahdawhdwdrrdwdrr';
+        var myhash = '// akadjkdawdwahdawhawhdwdrrjkadjkdawdwahdawhdwdrrjkadjkdawdwahdawhdwdrrjkadjkdawdwahdawhdwdrrdwdrr ';
         context.font = "12pt Arial";
         context.textAlign = "center";
         var centerX = 400;
         var centerY = 160;
-        var angle = Math.PI * 0.5; // radians
-        var radius = 100
-        // drawTextAlongArc(context, myhash, centerX, centerY, radius, angle);
-        context.fillTextCircle(myhash, centerX, centerY, radius, angle)
+        // var angle = Math.PI * 0.5; // radians
+        var radius = 90
+        context.fillTextCircle(myhash, centerX, centerY, radius, 0)
     }
 };
-//画出弧形文字
+
+
+/**
+ *
+ *画出弧形文字
+ * @param {*} 文字
+ * @param {*} x 中心坐标x轴
+ * @param {*} y 中心坐标y轴
+ * @param {*} radius  半径
+ * @param {*} startRotation  转圈的起始 0最上边 
+ */
 CanvasRenderingContext2D.prototype.fillTextCircle = function (text, x, y, radius, startRotation) {
     var numRadsPerLetter = 2 * Math.PI / text.length;
     this.save();
