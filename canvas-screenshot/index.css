@@ -1,0 +1,7 @@
+.main{width:100%; background-color: #fff; color:#000;}
+.main h2{ text-align: center;}
+.main p{ text-align: left; padding: 0;}
+.main hr{ margin-top: 0.3rem;}
+.main table{ width: 100%;border-collapse: collapse;border-spacing: 0;}
+.main table td,.main table th{ padding: 0.5rem; border:1px solid #ccc; text-align: center;}
+.btn{ width: 6rem; height: 2rem; line-height: 2rem; text-align: center; color: #fff; background: red; }
